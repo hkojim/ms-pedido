@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: ms-pedido
+  datasource:
+    url: jdbc:postgresql://localhost:5433/lab_pedidos_db
+    username: postgres
+    password: M1yamoto
+  jpa:
+    hibernate:
+      ddl-auto: update
+  cloud:
+    openfeign:
+      enabled: true
+
+server:
+  port: 8082
