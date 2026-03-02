@@ -9,4 +9,7 @@ import java.util.List;
 @Repository
 public interface PedidoRepository extends JpaRepository<PedidoEntity, Long> {
     List<PedidoEntity> findByPacienteCpf(String pacienteCpf);
+
+    // Se o atributo dentro de PedidoEntity se chama 'pacienteCpf'
+    List<PedidoEntity> findAllByPacienteCpf(String cpf);
 }

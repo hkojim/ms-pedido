@@ -10,6 +10,6 @@ public record PedidoResponseDTO(
         LocalDateTime dataSolicitacao,
         StatusPedido status,
         String observacoes,
-        Object paciente // Pode ser o DTO vindo do outro microsserviço
+        PacienteResponseDTO paciente // Objeto completo retornado pelo Feign
 ) {
 }
