@@ -1,9 +1,10 @@
 package miyamoto.ms_pedido.business.dto.request;
 
-import org.antlr.v4.runtime.misc.NotNull;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 public record PedidoRequestDTO(
-        @NotNull String pacienteCpf,
+        @NotNull @Size(min = 11, max = 11) String pacienteCpf,
         String observacoes
 ) {
 }

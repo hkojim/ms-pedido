@@ -18,8 +18,11 @@ public class PedidoEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    private Long pacienteCpf; // Referência lógica ao microsserviço de Pacientes
+    @Column(name = "paciente_id", nullable = false)
+    private Long pacienteId;
+
+    @Column(name = "pacienteCpf", nullable = false, length = 11)
+    private String pacienteCpf; // Referência lógica ao microsserviço de Pacientes
 
     @Column(nullable = false)
     private LocalDateTime dataSolicitacao;

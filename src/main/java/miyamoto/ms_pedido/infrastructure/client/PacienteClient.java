@@ -6,10 +6,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestHeader;
 
-@FeignClient(name = "paciente-service", url = "http://localhost:8081/api/pacientes")
+@FeignClient(name = "ms-paciente", url = "http://localhost:8081")
+
 public interface PacienteClient {
     // Método para validar se o paciente existe antes de gerar o pedido
-    @GetMapping("/{cpf}")
+    @GetMapping("/api/pacientes/{cpf}")
     PacienteResponseDTO buscarPorCpf(@PathVariable("cpf") String cpf,
                                     @RequestHeader("Authorization") String token);
 }
